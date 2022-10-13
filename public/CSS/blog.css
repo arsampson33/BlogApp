@@ -1,0 +1,10 @@
+ol{
+    color: white;
+    border: 1px solid red;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    color:white
+}

@@ -3,9 +3,15 @@ const React = require('react')
 class Blogs extends React.Component{
     render(){
         const blogs = this.props.blogs
+        const latestBlogs = blogs.reverse()
         return(
         <div>
-            <h1>Blog area</h1>
+            <head>
+                <link rel= "stylesheet" href="/CSS/app.css"/>
+                <link rel= "stylesheet" href="/CSS/blog.css"/>
+                
+            </head>
+            <h1>Blogs</h1>
             <form action='/blog' method='POST'>
             Title: <input type = 'text' name='title'/> <br/>
             Author: <input type = 'text' name='author'/> <br/>
@@ -14,12 +20,14 @@ class Blogs extends React.Component{
             <input type='submit' value='POST'/> 
             </form>
             <ul>
-                {blogs.map((blog,idx)=>{
+                {latestBlogs.map((blog,idx)=>{
                     return(
                         <ol style={styles.list}>
-                            {blog.title}<br/>
-                            {blog.author}<br/>
-                            {blog.body}
+                            <h1>{blog.title}</h1><br/>
+                            <h3>{blog.author}</h3><br/>
+                            <h2>{blog.body}</h2>
+                            <a href={`blog/${blog._id}/edit`}> Edit Post</a>
+                          
                         </ol>
                     )
                 })}

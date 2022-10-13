@@ -6,7 +6,7 @@ const router = express.Router()
 router.get('/', async(req,res) =>{
     try{
     const users = await UserModel.find({})
-    res.send(users)
+    res.render('Users/Users',{users:users})
     } catch(error){
         console.log(error);
         res.status(403).send('Cannot create')
@@ -27,7 +27,7 @@ router.get('/:id', async(req,res) =>{
  router.post('/', async (req,res) =>{
    try{
     const newUser = await UserModel.create(req.body)
-    res.send(newUser)
+    res.redirect('/blog')
    } catch(error){
     console.log(error);
     res.status(403).send('Cannot create')

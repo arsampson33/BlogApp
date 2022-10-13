@@ -1,16 +1,25 @@
 body {
-    background: url(https://images.clipartlogo.com/files/istock/previews/8741/87414357-apple-seamless-pastel-colors-pattern-fruits-texture-background.jpg);
     margin: 0;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Helvetica', cursive;
+    background: #161C40;
   }
   
   h1 {
-    font-family: 'Righteous', cursive;
-    background: antiquewhite;
-    margin:0;
-    margin-bottom: .5em;
-    padding: 1em;
+    font-family: 'Helvetica', cursive;
     text-align: center;
+    color: #F2C744;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-family: 'Helvetica', cursive;
+    text-align: center;
+    color: white;
+  }
+  h3 {
+    font-family: 'Helvetica', cursive;
+    text-align: center;
+    color: white;
+    margin-top: 0;
   }
   
   a {
@@ -18,20 +27,15 @@ body {
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
     font-size: 1.5em;
-    background: rgba(193, 235, 187, .9);
+    background-color: #A65D03;
+    
+  
   }
   
   a:hover {
     color: ghostwhite;
   }
-  
-  li {
-    list-style: none;
-  }
-  
-  li a {
-    color: mediumseagreen;
-  }
+ 
   
   input[type=text] {
     padding: .3em;

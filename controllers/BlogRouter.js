@@ -34,10 +34,20 @@ router.get('/:id', async(req,res) =>{
    }
  })
 
+router.get('/:id/edit' , async (req,res) =>{
+    try{
+        const foundBlog = await BlogModel.findById(req.params.id)
+        res.render('pages/Edit',{blogs:foundBlog})
+    } catch(error){
+        res.status(403).send('ID NOT FOUND')
+    }
+})
+
  //PUT: Update by ID
 router.put('/:id', async (req,res) =>{
     try{
         const updatedBlog = await BlogModel.findByIdAndUpdate(req.params.id, req.body,{'returnDocument' : "after"})
+        res.redirect('/blog')
     }catch(error){
         console.log(error);
         res.status(403).send('Cannot create')
