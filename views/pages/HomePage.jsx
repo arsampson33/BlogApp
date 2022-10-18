@@ -9,6 +9,7 @@ class HomePage extends React.Component {
                 <link rel= "stylesheet" href="/CSS/app.css"/>
             </head>
             <h1>BLOGSTIN</h1>
+            <img src='https://media.giphy.com/media/rYFwEBfTX9eJlh3TaI/giphy.gif'></img>
         </div>)
     }
 }

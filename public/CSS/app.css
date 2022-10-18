@@ -1,13 +1,13 @@
 body {
     margin: 0;
     font-family: 'Helvetica', cursive;
-    background: #161C40;
+    background: #dda15e;
   }
   
   h1 {
     font-family: 'Helvetica', cursive;
     text-align: center;
-    color: #F2C744;
+    color: #606c38;
     margin-bottom: 0;
   }
   h2 {
@@ -27,7 +27,7 @@ body {
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
     font-size: 1.5em;
-    background-color: #A65D03;
+    background-color: #283618;
     
   
   }
@@ -47,4 +47,10 @@ body {
     background: mediumseagreen;
     font-size: 1em;
     border-radius: 10%;
+  }
+
+  img{
+    display: flex;
+    align-items: center;
+    text-align: center;
   }

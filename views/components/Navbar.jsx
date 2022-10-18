@@ -9,9 +9,11 @@ class Navbar extends React.Component {
                 <link rel = 'stylesheet' href = '/CSS/nav.css'/>
             </head>
                 <ul>
+                
                <li><a href='/'>Home</a></li> 
                <li><a href='/blog'>Blogs</a></li> 
-               <li id ='end'><a href='/user'>Signin/up</a></li> 
+               <li id ='end'><a href='/user/signup'>Signin/up</a></li> 
+               <li><a href='/user/signout'>Signoutp</a></li> 
                 </ul>
             </nav>
         )

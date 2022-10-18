@@ -3,9 +3,10 @@ ul{
     padding:0;
     overflow: hidden;
     
-}
-
-nav{
+  }
+  
+  nav{
+    background-color: #283618;
     width:100%
 }
 

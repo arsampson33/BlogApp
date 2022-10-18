@@ -7,6 +7,8 @@ const db = mongoose.connection
 const morgan = require('morgan')
 const PORT = 3000
 const methodOverride = require('method-override')
+const session = require('express-session')
+const Mongostore = require('connect-mongo')
 
 const bodyParser = require("body-parser")
 
@@ -15,6 +17,13 @@ app.use(express.static('public'))
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(methodOverride('_method'))
+app.use(session({
+  secret: process.env.SECRET,
+  store: Mongostore.create({mongoUrl: process.env.MONGO_URI}),
+  resave: false,
+  saveUnitizalized: true
+
+}))
 
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());

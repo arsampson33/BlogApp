@@ -2,11 +2,19 @@ const express = require('express')
 const BlogModel = require('../models/BlogSchema')
 
 const router = express.Router()
+// Add privacy to router/route
+router.use((req,res,next)=>{
+    if(req.session.loggedIn){
+        next()
+    } else {
+        res.redirect('/user/signin')
+    }
+})
 
 router.get('/', async(req,res) =>{
     try{
     const blogs = await BlogModel.find({})
-    res.render('Blogs/Blogs', {blogs:blogs})
+    res.render('Blogs/Blogs', {blogs:blogs, loggedInUser: req.session.username})
     } catch(error){
         console.log(error);
         res.status(403).send('Cannot create')
@@ -26,6 +34,7 @@ router.get('/:id', async(req,res) =>{
 //POST: CREATE a New Blog
  router.post('/', async (req,res) =>{
    try{
+    req.body.author = req.session.username
     const newBlog = await BlogModel.create(req.body)
     res.redirect('/blog')
    } catch(error){
@@ -59,8 +68,7 @@ router.put('/:id', async (req,res) =>{
 router.delete('/:id', async (req, res) =>{
     try{
         const deletedBlog = await BlogModel.findByIdAndRemove(req.params.id)
-        console.log(deletedBlog)
-        res.send('Blog deleted')
+        res.redirect('/blog')
     }catch(error){
         console.log(error);
         res.status(403).send('Cannot create')
