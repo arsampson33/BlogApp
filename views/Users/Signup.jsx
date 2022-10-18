@@ -17,6 +17,7 @@ class Signup extends React.Component{
             Password: <input type='password' name='password'/><br/>
             <input type='submit' value='Create Account'/> 
         </form>
+        <h3>Already Have An Account? <a href='/user/signin'>Sign In</a></h3>
         </div>
     )}
 }

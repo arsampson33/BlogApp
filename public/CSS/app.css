@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'Helvetica', cursive;
@@ -5,7 +6,7 @@ body {
   }
   
   h1 {
-    font-family: 'Helvetica', cursive;
+    font-family: 'Space Mono', monospace;
     text-align: center;
     color: #606c38;
     margin-bottom: 0;
@@ -22,15 +23,6 @@ body {
     margin-top: 0;
   }
   
-  a {
-    color: orange;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px black;
-    font-size: 1.5em;
-    background-color: #283618;
-    
-  
-  }
   
   a:hover {
     color: ghostwhite;
@@ -50,7 +42,8 @@ body {
   }
 
   img{
-    display: flex;
-    align-items: center;
-    text-align: center;
+    width: 1000px;
+    height: 500px;
+    left: 150px;
+    position: relative;
   }

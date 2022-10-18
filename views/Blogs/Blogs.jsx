@@ -16,7 +16,6 @@ class Blogs extends React.Component{
             <h1>Posts</h1>
             <form action='/blog' id= 'newPost' method='POST'>
             Title: <input type = 'text' name='title'/> <br/>
-            Author: <input type = 'text' name='author'/> <br/>
             Body: <textarea  name='body' id='body'/> <br/>
             Sponsored?: <input type = 'checkbox' name='sponsored'/> <br/>
             <input type='submit' value='POST'/> 
@@ -26,9 +25,9 @@ class Blogs extends React.Component{
                     return(
                         <div>
                         <ol id='blog'>
-                            <h1>{blog.title}</h1><br/>
-                            <h3>Written By: {blog.author}</h3><br/>
-                            <h2>{blog.body}</h2>
+                            <h1 style={styles.title}>{blog.title}</h1><br/>
+                            <h3 style={styles.writer}>Written By: {blog.author}</h3><br/>
+                            <h2 style={styles.body}>{blog.body}</h2>
                             {blog.author === loggedInUser ? (
                                 <div>
                             <a style={styles.submit} class ='btn' href={`blog/${blog._id}/edit`}> Edit Post</a>
@@ -55,6 +54,15 @@ const styles = {
         padding:'10px',
         borderRadius:'2rem'
 
+    },
+    body:{
+        color: "#606c38"
+    },
+    title:{
+        color: "#283618"
+    },
+    writer:{
+        color: "#fefae0"
     }
 }
 module.exports = Blogs

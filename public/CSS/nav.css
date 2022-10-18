@@ -21,3 +21,13 @@ li a {
     display: block;
   padding:14px 16px;
 }
+
+.navlink{
+  color: orange;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  font-size: 1.5em;
+  background-color: #283618;
+  
+
+}

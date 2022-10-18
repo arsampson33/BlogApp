@@ -5,7 +5,7 @@ require('dotenv').config()
 const mongoURI = process.env.MONGO_URI
 const db = mongoose.connection
 const morgan = require('morgan')
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 const methodOverride = require('method-override')
 const session = require('express-session')
 const Mongostore = require('connect-mongo')
@@ -14,6 +14,9 @@ const bodyParser = require("body-parser")
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'))
+
+
+
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(methodOverride('_method'))

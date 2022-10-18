@@ -10,10 +10,10 @@ class Navbar extends React.Component {
             </head>
                 <ul>
                 
-               <li><a href='/'>Home</a></li> 
-               <li><a href='/blog'>Blogs</a></li> 
-               <li id ='end'><a href='/user/signup'>Signin/up</a></li> 
-               <li><a href='/user/signout'>Signoutp</a></li> 
+               <li><a class='navlink' href='/'>Home</a></li> 
+               <li><a class='navlink'href='/blog'>Blogs</a></li> 
+               <li><a class='navlink' href='/user/signin'>Sign In</a></li> 
+               <li><a class='navlink' href='/user/signout'>Sign Out</a></li> 
                 </ul>
             </nav>
         )
